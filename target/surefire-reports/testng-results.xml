@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-11-10T11:37:37 MSK" name="by.epam.taskFour.service.NumberServiceTest" finished-at="2020-11-10T11:37:37 MSK" duration-ms="170">
+    <groups>
+    </groups>
+    <test started-at="2020-11-10T11:37:37 MSK" name="Command line test" finished-at="2020-11-10T11:37:37 MSK" duration-ms="170">
+      <class name="by.epam.taskFour.service.NumberServiceTest">
+        <test-method signature="isTwoEvenNumbersFalse()[pri:0, instance:by.epam.taskFour.service.NumberServiceTest@36c88a32]" started-at="2020-11-10T11:37:37 MSK" name="isTwoEvenNumbersFalse" finished-at="2020-11-10T11:37:37 MSK" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isTwoEvenNumbersFalse -->
+        <test-method signature="isTwoEvenNumbersTrue()[pri:0, instance:by.epam.taskFour.service.NumberServiceTest@36c88a32]" started-at="2020-11-10T11:37:37 MSK" name="isTwoEvenNumbersTrue" finished-at="2020-11-10T11:37:37 MSK" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isTwoEvenNumbersTrue -->
+      </class> <!-- by.epam.taskFour.service.NumberServiceTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- by.epam.taskFour.service.NumberServiceTest -->
+</testng-results>
