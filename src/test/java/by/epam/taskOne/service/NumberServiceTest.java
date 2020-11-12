@@ -1,24 +1,23 @@
 package by.epam.taskOne.service;
 
-import by.epam.taskOne.entity.MyNumber;
+import by.epam.taskOne.entity.NumberEntity;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class NumberServiceTest {
-    @Test
-    public void findTheLastSquareNumberEquals() {
-        MyNumber myNumber = new MyNumber(144);
-        NumberService service = new NumberService();
-        int condition = service.findTheLastSquareNumber(myNumber);
-        assertEquals(condition, 6);
-    }
+
+    private static final int NUMBER = 144;
+    private static final int EXPECTED = 6;
 
     @Test
-    public void findTheLastSquareNumberNotEquals() {
-        MyNumber myNumber = new MyNumber(144);
+    public void findTheLastSquareNumber() {
+        // Given
+        NumberEntity numberEntity = new NumberEntity(NUMBER);
         NumberService service = new NumberService();
-        int condition = service.findTheLastSquareNumber(myNumber);
-        assertNotEquals(condition, 7);
+        // When
+        int actual = service.findTheLastSquareNumber(numberEntity);
+        // Then
+        assertEquals(EXPECTED, actual);
     }
 }

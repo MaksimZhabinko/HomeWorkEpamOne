@@ -1,6 +1,7 @@
 package by.epam.taskThree.entity;
 
 public class SquareArea {
+
     private double squareArea;
 
     public SquareArea(double squareArea) {
@@ -17,8 +18,9 @@ public class SquareArea {
 
     @Override
     public String toString() {
-        return "SquareArea{" +
-                "squareArea=" + squareArea +
-                '}';
+        final StringBuilder sb = new StringBuilder("SquareArea{");
+        sb.append("squareArea=").append(squareArea);
+        sb.append('}');
+        return sb.toString();
     }
 }

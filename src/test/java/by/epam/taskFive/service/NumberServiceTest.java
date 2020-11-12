@@ -1,25 +1,34 @@
 package by.epam.taskFive.service;
 
-import by.epam.taskFive.entity.MyNumber;
+import by.epam.taskFive.entity.NumberEntity;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class NumberServiceTest {
+
+    private static final int NUMBER_TRUE = 28;
+    private static final int NUMBER_FALSE = 27;
+
     @Test
     public void isNumberPerfectTrue() {
-        MyNumber number = new MyNumber(28);
+        // Given
+        NumberEntity number = new NumberEntity(NUMBER_TRUE);
         NumberService service = new NumberService();
+        // When
         boolean condition = service.isNumberPerfect(number);
+        // Then
         assertTrue(condition);
     }
 
     @Test
     public void isNumberPerfectFalse() {
-        MyNumber number = new MyNumber(27);
+        // Given
+        NumberEntity number = new NumberEntity(NUMBER_FALSE);
         NumberService service = new NumberService();
+        // When
         boolean condition = service.isNumberPerfect(number);
+        // Then
         assertFalse(condition);
     }
-
 }

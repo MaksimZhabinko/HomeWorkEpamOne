@@ -1,6 +1,7 @@
 package by.epam.taskSix.entity;
 
 public class TimeEntity {
+
     private int seconds;
 
     public TimeEntity(int seconds) {
@@ -17,8 +18,9 @@ public class TimeEntity {
 
     @Override
     public String toString() {
-        return "TimeEntity{" +
-                "seconds=" + seconds +
-                '}';
+        final StringBuilder sb = new StringBuilder("TimeEntity{");
+        sb.append("seconds=").append(seconds);
+        sb.append('}');
+        return sb.toString();
     }
 }

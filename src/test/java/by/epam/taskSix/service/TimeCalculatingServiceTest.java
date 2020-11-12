@@ -9,22 +9,18 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class TimeCalculatingServiceTest {
-    @Test
-    public void calculateTimeEquals() {
-        TimeEntity sec = new TimeEntity(3061);
-        TimeCalculatingService service = new TimeCalculatingService();
-        List<Integer> condition = service.calculateTime(sec);
-        List<Integer> actual = Arrays.asList(0, 51, 1);
-        assertEquals(condition, actual);
-    }
+
+    private static final int SECONDS = 3061;
+    private static final List<Integer> EXPECTED = Arrays.asList(0, 51, 1);
 
     @Test
-    public void calculateTimeNotEquals() {
-        TimeEntity sec = new TimeEntity(3061);
+    public void calculateTime() {
+        // Given
+        TimeEntity sec = new TimeEntity(SECONDS);
         TimeCalculatingService service = new TimeCalculatingService();
-        List<Integer> condition = service.calculateTime(sec);
-        List<Integer> actual = Arrays.asList(0, 31, 1);
-        assertNotEquals(condition, actual);
+        // When
+        List<Integer> actual = service.calculateTime(sec);
+        // Then
+        assertEquals(EXPECTED, actual);
     }
-
 }

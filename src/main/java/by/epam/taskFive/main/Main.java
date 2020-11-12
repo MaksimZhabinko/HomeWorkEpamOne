@@ -1,15 +1,19 @@
 package by.epam.taskFive.main;
 
-import by.epam.taskFive.entity.MyNumber;
+import by.epam.taskFive.entity.NumberEntity;
 import by.epam.taskFive.report.NumberReport;
 import by.epam.taskFive.service.NumberService;
 
 public class Main {
+
+    private static final int NUMBER = 28;
+
     public static void main(String[] args) {
-        MyNumber number = new MyNumber(28);
+        NumberEntity number = new NumberEntity(NUMBER);
         NumberService service = new NumberService();
+        boolean isPerfect = service.isNumberPerfect(number);
         NumberReport report = new NumberReport();
-        report.print(number,service.isNumberPerfect(number));
+        report.print(number, isPerfect);
     }
 }
 

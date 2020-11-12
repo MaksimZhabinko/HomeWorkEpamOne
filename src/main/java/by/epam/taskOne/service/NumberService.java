@@ -1,10 +1,10 @@
 package by.epam.taskOne.service;
 
-import by.epam.taskOne.entity.MyNumber;
+import by.epam.taskOne.entity.NumberEntity;
 
 public class NumberService {
-    public int findTheLastSquareNumber(MyNumber myNumber) {
-         return myNumber.getNumber() % 10 * myNumber.getNumber() % 10;
+    public int findTheLastSquareNumber(NumberEntity numberEntity) {
+         return numberEntity.getNumber() % 10 * numberEntity.getNumber() % 10;
     }
 
 }

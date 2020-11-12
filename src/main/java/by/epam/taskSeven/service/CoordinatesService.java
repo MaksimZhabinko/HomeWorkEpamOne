@@ -7,7 +7,7 @@ public class CoordinatesService {
     public final static Point2D POINTZERO = new Point2D(0, 0);
 
     public double calculateDistance(Point2D a, Point2D b) {
-        double d = Math.sqrt((b.getX1() - a.getX1()) * (b.getX1() - a.getX1()) + (b.getY1() - a.getY1() * (b.getY1() - a.getY1())));
+        double d = Math.sqrt((b.getX() - a.getX()) * (b.getX() - a.getX()) + (b.getY() - a.getY() * (b.getY() - a.getY())));
         return d;
     }
 

@@ -5,11 +5,17 @@ import by.epam.taskThree.report.FigureReport;
 import by.epam.taskThree.service.FigureService;
 
 public class Main {
+
+    private static final int SQUARE_AREA = 16;
+
     public static void main(String[] args) {
-        SquareArea squareArea = new SquareArea(16);
-        FigureService figureService = new FigureService();
+        SquareArea squareArea = new SquareArea(SQUARE_AREA);
+        FigureService service = new FigureService();
         FigureReport report = new FigureReport();
-        report.printInnerSquareArea(squareArea,figureService.findInnerSquareArea(figureService.findOuterSquareSide(squareArea)));
-        report.printCompareSquares(figureService.compareSquares(squareArea,figureService.findInnerSquareArea(figureService.findOuterSquareSide(squareArea))));
+        double outerSquareSide = service.findOuterSquareSide(squareArea);
+        double innerSquareArea = service.findInnerSquareArea(outerSquareSide);
+        report.printInnerSquareArea(squareArea, innerSquareArea);
+        double compareSquares = service.compareSquares(squareArea, innerSquareArea);
+        report.printCompareSquares(compareSquares);
     }
 }

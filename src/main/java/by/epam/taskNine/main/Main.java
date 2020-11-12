@@ -1,15 +1,18 @@
 package by.epam.taskNine.main;
 
-import by.epam.taskNine.entity.Entity;
-import by.epam.taskNine.report.Report;
-import by.epam.taskNine.service.Service;
+import by.epam.taskNine.entity.Circle;
+import by.epam.taskNine.report.CircleReport;
+import by.epam.taskNine.service.CircleService;
 
 public class Main {
+
+    private static final int CIRCLE = 3;
+
     public static void main(String[] args) {
-        Entity entity = new Entity(3);
-        Service service = new Service();
-        service.circumferenceAndAreaOfACircle(entity);
-        Report report = new Report();
-        report.print(entity);
+        Circle circle = new Circle(CIRCLE);
+        CircleService circleService = new CircleService();
+        circleService.circumferenceAndAreaOfACircle(circle);
+        CircleReport circleReport = new CircleReport();
+        circleReport.print(circle);
     }
 }

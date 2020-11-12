@@ -6,51 +6,43 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FigureServiceTest {
+
+    private static final int SQUARE_AREA = 16;
+    private static final double EXPECTED_FOR_OUTER = 4.0;
+    private static final double EXPECTED_FOR_INNER = 8.0;
+    private static final double EXPECTED_FOR_COMPARE = 2.0;
+    private static final double DELTA = 0.0;
+
     @Test
-    public void findOuterSquareSideEquals() {
-        SquareArea squareArea = new SquareArea(16);
+    public void findOuterSquareSide() {
+        // Given
+        SquareArea squareArea = new SquareArea(SQUARE_AREA);
         FigureService service = new FigureService();
-        double condition = service.findOuterSquareSide(squareArea);
-        assertEquals(condition, 4.0, 0.0);
+        // When
+        double actual = service.findOuterSquareSide(squareArea);
+        // Then
+        assertEquals(EXPECTED_FOR_OUTER, actual, DELTA);
     }
 
     @Test
-    public void findOuterSquareSideNotEquals() {
-        SquareArea squareArea = new SquareArea(16);
+    public void findInnerSquareArea() {
+        // Given
+        SquareArea squareArea = new SquareArea(SQUARE_AREA);
         FigureService service = new FigureService();
-        double condition = service.findOuterSquareSide(squareArea);
-        assertNotEquals(condition, 3.0, 0.0);
+        // When
+        double actual = service.findInnerSquareArea(service.findOuterSquareSide(squareArea));
+        // Then
+        assertEquals(EXPECTED_FOR_INNER, actual, DELTA);
     }
 
     @Test
-    public void findInnerSquareAreaEquals() {
-        SquareArea squareArea = new SquareArea(16);
+    public void compareSquares() {
+        // Given
+        SquareArea squareArea = new SquareArea(SQUARE_AREA);
         FigureService service = new FigureService();
-        double condition = service.findInnerSquareArea(service.findOuterSquareSide(squareArea));
-        assertEquals(condition, 8.0, 0.0);
-    }
-
-    @Test
-    public void findInnerSquareAreaNotEquals() {
-        SquareArea squareArea = new SquareArea(16);
-        FigureService service = new FigureService();
-        double condition = service.findInnerSquareArea(service.findOuterSquareSide(squareArea));
-        assertNotEquals(condition, 7.0, 0.0);
-    }
-
-    @Test
-    public void compareSquaresEquals() {
-        SquareArea squareArea = new SquareArea(16);
-        FigureService service = new FigureService();
-        double condition = service.compareSquares(squareArea, service.findInnerSquareArea(service.findOuterSquareSide(squareArea)));
-        assertEquals(condition, 2.0, 0.0);
-    }
-
-    @Test
-    public void compareSquaresNotEquals() {
-        SquareArea squareArea = new SquareArea(16);
-        FigureService service = new FigureService();
-        double condition = service.compareSquares(squareArea, service.findInnerSquareArea(service.findOuterSquareSide(squareArea)));
-        assertNotEquals(condition, 1.0, 0.0);
+        // When
+        double actual = service.compareSquares(squareArea, service.findInnerSquareArea(service.findOuterSquareSide(squareArea)));
+        // Then
+        assertEquals(EXPECTED_FOR_COMPARE, actual, DELTA);
     }
 }
