@@ -12,5 +12,4 @@ public class NumberService {
         }
         return z;
     }
-
 }

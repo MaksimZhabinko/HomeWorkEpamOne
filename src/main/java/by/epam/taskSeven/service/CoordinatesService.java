@@ -3,7 +3,7 @@ package by.epam.taskSeven.service;
 import by.epam.taskSeven.entity.Point2D;
 
 public class CoordinatesService {
-
+    
     public final static Point2D POINTZERO = new Point2D(0, 0);
 
     public double calculateDistance(Point2D a, Point2D b) {

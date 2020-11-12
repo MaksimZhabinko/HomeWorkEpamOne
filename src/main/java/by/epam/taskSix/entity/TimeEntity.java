@@ -1,7 +1,6 @@
 package by.epam.taskSix.entity;
 
 public class TimeEntity {
-
     private int seconds;
 
     public TimeEntity(int seconds) {

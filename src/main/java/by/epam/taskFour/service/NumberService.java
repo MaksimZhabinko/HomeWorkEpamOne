@@ -3,7 +3,9 @@ package by.epam.taskFour.service;
 import by.epam.taskFour.entity.NumberArray;
 
 public class NumberService {
+
   public final static int BASE_EVEN_COUNT = 2;
+
   public boolean isTwoEvenNumbers(NumberArray array){
     int counter = 0;
     for (int i = 0; i < array.size(); i++) {

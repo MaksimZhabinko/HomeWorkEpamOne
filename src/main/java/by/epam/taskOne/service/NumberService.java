@@ -6,5 +6,4 @@ public class NumberService {
     public int findTheLastSquareNumber(NumberEntity numberEntity) {
          return numberEntity.getNumber() % 10 * numberEntity.getNumber() % 10;
     }
-
 }

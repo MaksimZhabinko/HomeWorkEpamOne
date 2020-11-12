@@ -1,7 +1,6 @@
 package by.epam.taskTwo.entity;
 
 public class DateEntity {
-
     private int year;
     private int month;
 

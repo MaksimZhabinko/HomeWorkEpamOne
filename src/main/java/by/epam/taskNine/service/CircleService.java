@@ -10,5 +10,4 @@ public class CircleService {
         circle.setS(PI * circle.getR() * circle.getR());
         circle.setL(2 * PI * circle.getR());
     }
-
 }

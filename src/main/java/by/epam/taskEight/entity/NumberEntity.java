@@ -1,7 +1,6 @@
 package by.epam.taskEight.entity;
 
 public class NumberEntity {
-
     private double number;
 
     public NumberEntity(double number) {

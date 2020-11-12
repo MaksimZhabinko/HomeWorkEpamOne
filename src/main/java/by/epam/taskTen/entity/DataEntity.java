@@ -1,7 +1,6 @@
 package by.epam.taskTen.entity;
 
 public class DataEntity {
-
     private double a;
     private double b;
     private double h;

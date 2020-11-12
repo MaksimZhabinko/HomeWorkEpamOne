@@ -1,7 +1,6 @@
 package by.epam.taskThree.entity;
 
 public class SquareArea {
-
     private double squareArea;
 
     public SquareArea(double squareArea) {

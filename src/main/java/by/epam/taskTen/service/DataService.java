@@ -11,6 +11,6 @@ public class DataService {
             map.put(dataEntity.getA(),Math.tan(dataEntity.getA()));
         }
         return map;
-        }
     }
+}
 

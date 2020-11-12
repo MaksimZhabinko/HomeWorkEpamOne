@@ -3,7 +3,6 @@ package by.epam.taskNine.entity;
 import java.util.Objects;
 
 public class Circle {
-
     private int r;
     private double s;
     private double l;

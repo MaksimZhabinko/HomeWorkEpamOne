@@ -3,7 +3,6 @@ package by.epam.taskFour.entity;
 import java.util.Arrays;
 
 public class NumberArray {
-
   private int[] numbers;
 
   public NumberArray(int... numbers) {

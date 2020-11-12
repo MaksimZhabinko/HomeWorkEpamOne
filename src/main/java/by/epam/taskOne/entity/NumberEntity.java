@@ -1,7 +1,6 @@
 package by.epam.taskOne.entity;
 
 public class NumberEntity {
-
     private int number;
 
     public NumberEntity(int number) {
